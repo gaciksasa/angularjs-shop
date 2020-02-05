@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "First slide label",
+    "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "url": "img/slider1.jpg",
+    "featured": true,
+    "category": "footwear"
+  },
+  {
+    "id": 2,
+    "name": "Second slide label",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "url": "img/slider2.jpg",
+    "featured": false,
+    "category": "clothing"
+  },
+  {
+    "id": 3,
+    "name": "Third slide label",
+    "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+    "url": "img/slider3.jpg",
+    "featured": true,
+    "category": "trainers"
+  },
+  {
+    "id": 4,
+    "name": "Fourth slide label",
+    "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "url": "img/slider1.jpg",
+    "featured": false,
+    "category": "footwear"
+  },
+  {
+    "id": 5,
+    "name": "Fifth slide label",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "url": "img/slider2.jpg",
+    "featured": true,
+    "category": "clothing"
+  },
+  {
+    "id": 6,
+    "name": "Sixth slide label",
+    "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+    "url": "img/slider3.jpg",
+    "featured": false,
+    "category": "trainers"
+  }
+]

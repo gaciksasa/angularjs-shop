@@ -16,8 +16,11 @@ app.config(function ($routeProvider) {
 });
 
 app.controller("productsFeaturedCarousel", function ($scope, $http) {
-    $http.get("js/productsFeatured.json")
+    $http.get("js/products.json")
     .then(function (response) {
         $scope.products = response.data;
+        $scope.isFeatured = function(products) {
+            return products.featured == true;
+        };
     });
 });
