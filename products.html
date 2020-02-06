@@ -1,18 +1,38 @@
 <div class="container" ng-controller="productsList">
     <h2 class="my-4">Products</h2>
-    <div class="form-group row col-lg-4">
-        <input type="text" class="form-control" ng-model="searchProduct" placeholder="Search products">
-        {{ result.length }} results.
+
+    <div class="form-group row bar bg-info">
+        <div class="col-sm-6"><input type="text" class="form-control" ng-model="searchProduct"
+                placeholder="Search products"></div>
+        <div class="col-sm-6 text-right">
+            <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
+            <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
+        </div>
     </div>
-    <div class="row">
+
+    <div class="row grid" ng-show="layout == 'grid'">
         <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct as result">
-            <div class="card mb-4 {{product.category}}">
+            <div class="card mb-4">
                 <img ng-src="{{product.url}}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}</p>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-primary">View Details</a>
+                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right">View Details</a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row list" ng-show="layout == 'list'">
+        <div class="col-sm-12 mb-4" ng-repeat="product in products | filter: searchProduct as result">
+            <div class="media border rounded">
+                <img width="348" ng-src="{{product.url}}" alt="">
+                <div class="media-body p-3">
+                    <h5 class="mt-0">{{product.name}}</h5>
+                    {{product.description}}
+                </div>
+                <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right align-self-end m-3">View
+                    Details</a>
             </div>
         </div>
     </div>
