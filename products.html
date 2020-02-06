@@ -4,33 +4,16 @@
         <input type="text" class="form-control" ng-model="searchProduct" placeholder="Search products">
         {{ result.length }} results.
     </div>
-    <div id="filters" class="button-group"> <button class="button is-checked" data-filter="*">show all</button>
-        <button class="button" data-filter=".footwear">Footwear</button>
-        <button class="button" data-filter=".trainers">Trainers</button>
-        <button class="button" data-filter=".clothing">Clothing</button>
-    </div>
-    <div class="row grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'>
-        <div class="grid-item col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct as result">
-            <div class="card mb-4 {{product.category}}" data-category="{{product.category}}">
-                <img ng-src="{{product.url}}" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.description}}</p>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-primary">Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--<div class="row">
+    <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct as result">
-            <div class="card mb-4">
+            <div class="card mb-4 {{product.category}}">
                 <img ng-src="{{product.url}}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}</p>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-primary">Details</a>
+                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-primary">View Details</a>
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 </div>
