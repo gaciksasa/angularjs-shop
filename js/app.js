@@ -21,6 +21,12 @@ app.config(['$routeProvider', function ($routeProvider) {
         });
 }]);
 
+app.controller("HeaderController", function($scope, $location) { 
+    $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
+});
+
 app.controller("productsFeaturedCarousel", function ($scope, $http) {
     $http.get("js/products.json").then(function (response) {
         $scope.products = response.data;
@@ -46,3 +52,5 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
         };
     });
 }]);
+
+

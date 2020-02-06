@@ -17,23 +17,25 @@
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}</p>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right">View Details</a>
+                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right">Details</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row list" ng-show="layout == 'list'">
-        <div class="col-sm-12 mb-4" ng-repeat="product in products | filter: searchProduct as result">
-            <div class="media border rounded">
-                <img width="348" ng-src="{{product.url}}" alt="">
-                <div class="media-body p-3">
-                    <h5 class="mt-0">{{product.name}}</h5>
-                    {{product.description}}
-                </div>
-                <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right align-self-end m-3">View
-                    Details</a>
-            </div>
-        </div>
+    <div class="list" ng-show="layout == 'list'">
+        <ul class="list-group list-group-horizontal-md mb-4 border rounded"
+            ng-repeat="product in products | filter: searchProduct">
+            <li class="list-group-item p-0">
+                <img ng-src="{{product.url}}" />
+            </li>
+            <li class="list-group-item flex-fill">
+                <h5 class="mt-0">{{product.name}}</h5>
+                {{product.description}}
+            </li>
+            <li class="list-group-item d-flex align-items-end justify-content-end">
+                <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
+            </li>
+        </ul>
     </div>
 </div>
