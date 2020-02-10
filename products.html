@@ -1,46 +1,68 @@
 <div class="container" ng-controller="productsList">
     <h2 class="my-4">Products</h2>
-
-    <div class="form-group row bar bg-info">
-        <div class="col-6 col-md-4"><input type="text" class="form-control" ng-model="searchProduct"
-                placeholder="Search products"></div>
-        <div class="col-6 col-md-8 text-right">
-            <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
-            <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
-        </div>
-    </div>
-
-    <div class="row grid" ng-show="layout == 'grid'">
-        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct">
-            <div class="card mb-4">
-                <img ng-src="{{product.url}}" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.description}}</p>
-                    <h5 class="card-title">{{product.price | currency}}</h5>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">View details</a>
-                    <button class="btn btn-info ml-2">Add to cart</button>
+    <div class="row">
+        <div class="col-9">
+            <div class="form-group row bar bg-info">
+                <div class="col-6 col-md-4"><input type="text" class="form-control" ng-model="searchProduct"
+                        placeholder="Search products"></div>
+                <div class="col-6 col-md-8 text-right">
+                    <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
+                    <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="list" ng-show="layout == 'list'">
-        <div class="card mb-4" ng-repeat="product in products | filter: searchProduct">
-            <div class="row no-gutters">
-                <div class="col-lg-5 col-md-12">
-                    <img ng-src="{{product.url}}" class="card-img" alt="">
-                </div>
-                <div class="col-lg-7 col-md-12">
-                    <div class="card-body">
-                        <h5 class="card-title">{{product.name}}</h5>
-                        <p class="card-text">{{product.description}}</p>
-                        <h5 class="card-title">{{product.price | currency}}</h5>
-                        <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">View details</a>
-                        <button class="btn btn-info ml-2">Add to cart</button>
+            <div class="row grid" ng-show="layout == 'grid'">
+                <div class="col-xl-4 col-lg-6 col-sm-12" ng-repeat="item in products | filter: searchProduct">
+                    <div class="card mb-4">
+                        <img ng-src="{{item.url}}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.name}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                            <h5 class="card-title">{{item.price | currency}}</h5>
+                            <div class="form-inline">
+                                <a href ng-href="#!/products/{{item.id}}" class="btn btn-dark">View</a>
+                                <input type="number" ng-init="item.qty=1" ng-model="item.qty" class="qty form-control ml-2">
+                                <button class="btn btn-info ml-2" ng-click="addItem(item)">Add</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="list" ng-show="layout == 'list'">
+                <div class="card mb-4" ng-repeat="item in products | filter: searchProduct">
+                    <div class="row no-gutters">
+                        <div class="col-lg-5 col-md-12 card-img" style='background-image: url({{item.url}})'>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.name}}</h5>
+                                <p class="card-text">{{item.description}}</p>
+                                <h5 class="card-title">{{item.price | currency}}</h5>
+                                <div class="form-inline">
+                                    <a href ng-href="#!/products/{{item.id}}" class="btn btn-dark">View</a>
+                                    <input type="number" ng-init="item.qty=1" ng-model="item.qty"
+                                        class="qty form-control ml-2">
+                                    <button class="btn btn-info ml-2" ng-click="addItem(item)">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <h2>Your Cart:</h2>
+            <ul>
+                <li class="animate-repeat" ng-repeat="item in cart | orderBy:'category'">
+                    <span>{{ item.qty + ' x ' + item.name + ' = ' + (getCost(item) | currency) }}</span>
+                    <button class="btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
+                    </br>
+                    </br>
+                </li>
+            </ul>
+            <h3>Total: {{ getTotal() | currency }}</h3>
+            <button class="btn-danger" ng-click="clearCart();">Clear Cart</button>
         </div>
     </div>
 </div>
