@@ -11,16 +11,15 @@
     </div>
 
     <div class="row grid" ng-show="layout == 'grid'">
-        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct as result">
+        <div class="col-lg-4 col-md-6 col-sm-12" ng-repeat="product in products | filter: searchProduct">
             <div class="card mb-4">
                 <img ng-src="{{product.url}}" class="card-img-top" alt="">
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}</p>
                     <h5 class="card-title">{{product.price | currency}}</h5>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
-                    <button class="btn btn-info ml-2">Buy <i class="fa fa-shopping-cart"
-                            aria-hidden="true"></i></button>
+                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">View details</a>
+                    <button class="btn btn-info ml-2">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -37,8 +36,8 @@
                         <h5 class="card-title">{{product.name}}</h5>
                         <p class="card-text">{{product.description}}</p>
                         <h5 class="card-title">{{product.price | currency}}</h5>
-                        <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
-                        <button class="btn btn-info ml-2">Buy <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                        <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">View details</a>
+                        <button class="btn btn-info ml-2">Add to cart</button>
                     </div>
                 </div>
             </div>

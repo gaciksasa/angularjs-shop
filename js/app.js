@@ -1,4 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
+
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when("/", {
@@ -16,13 +17,16 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/contact", {
             templateUrl: "contact.html"
         })
+        .when("/cart", {
+            templateUrl: "cart.html"
+        })
         .otherwise({
             redirectTo: '/'
         });
 }]);
 
-app.controller("HeaderController", function($scope, $location) { 
-    $scope.isActive = function (viewLocation) { 
+app.controller("HeaderController", function ($scope, $location) {
+    $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
 });
@@ -52,5 +56,4 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
         };
     });
 }]);
-
 
