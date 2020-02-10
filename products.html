@@ -17,25 +17,31 @@
                 <div class="card-body">
                     <h5 class="card-title">{{product.name}}</h5>
                     <p class="card-text">{{product.description}}</p>
-                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark float-right">Details</a>
+                    <h5 class="card-title">{{product.price | currency}}</h5>
+                    <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
+                    <button class="btn btn-info ml-2">Buy <i class="fa fa-shopping-cart"
+                            aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="list" ng-show="layout == 'list'">
-        <ul class="list-group list-group-horizontal-md mb-4 border rounded"
-            ng-repeat="product in products | filter: searchProduct">
-            <li class="list-group-item p-0">
-                <img ng-src="{{product.url}}" />
-            </li>
-            <li class="list-group-item flex-fill">
-                <h5 class="mt-0">{{product.name}}</h5>
-                {{product.description}}
-            </li>
-            <li class="list-group-item d-flex align-items-end justify-content-end">
-                <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
-            </li>
-        </ul>
+        <div class="card mb-4" ng-repeat="product in products | filter: searchProduct">
+            <div class="row no-gutters">
+                <div class="col-lg-5 col-md-12">
+                    <img ng-src="{{product.url}}" class="card-img" alt="">
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">{{product.description}}</p>
+                        <h5 class="card-title">{{product.price | currency}}</h5>
+                        <a href ng-href="#!/products/{{product.id}}" class="btn btn-dark">Details</a>
+                        <button class="btn btn-info ml-2">Buy <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

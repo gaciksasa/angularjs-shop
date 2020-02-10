@@ -5,7 +5,8 @@
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": true,
-    "category": "footwear"
+    "category": "footwear",
+    "price": 170
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": false,
-    "category": "clothing"
+    "category": "clothing",
+    "price": 100
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": true,
-    "category": "trainers"
+    "category": "trainers",
+    "price": 120
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": false,
-    "category": "footwear"
+    "category": "footwear",
+    "price": 180
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": true,
-    "category": "clothing"
+    "category": "clothing",
+    "price": 200
   },
   {
     "id": 6,
@@ -45,6 +50,7 @@
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": false,
-    "category": "trainers"
+    "category": "trainers",
+    "price": 150
   }
 ]

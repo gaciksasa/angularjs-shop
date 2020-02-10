@@ -40,7 +40,7 @@
     max-width: 348px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 996px) {
     .list-group-item img {
         max-width: 100%;
     }
