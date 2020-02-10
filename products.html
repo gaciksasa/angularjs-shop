@@ -1,7 +1,7 @@
 <div class="container" ng-controller="productsList">
     <h2 class="my-4">Products</h2>
     <div class="row">
-        <div class="col-9">
+        <div class="col-sm-12 col-lg-9">
             <div class="form-group row bar bg-info">
                 <div class="col-6 col-md-4"><input type="text" class="form-control" ng-model="searchProduct"
                         placeholder="Search products"></div>
@@ -21,7 +21,8 @@
                             <h5 class="card-title">{{item.price | currency}}</h5>
                             <div class="form-inline">
                                 <a href ng-href="#!/products/{{item.id}}" class="btn btn-dark">View</a>
-                                <input type="number" ng-init="item.qty=1" ng-model="item.qty" class="qty form-control ml-2">
+                                <input type="number" ng-init="item.qty=1" ng-model="item.qty"
+                                    class="qty form-control ml-2">
                                 <button class="btn btn-info ml-2" ng-click="addItem(item)">Add</button>
                             </div>
                         </div>
@@ -51,18 +52,24 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
-            <h2>Your Cart:</h2>
-            <ul>
-                <li class="animate-repeat" ng-repeat="item in cart | orderBy:'category'">
-                    <span>{{ item.qty + ' x ' + item.name + ' = ' + (getCost(item) | currency) }}</span>
-                    <button class="btn-danger btn-xs" ng-click="removeItem(item);">Remove Item</button>
-                    </br>
-                    </br>
+        <div class="col-sm-12 col-lg-3">
+            <ul class="list-group">
+                <li class="list-group-item active bg-dark border-0 p-3">Your Cart</li>
+                <li class="list-group-item p-3" ng-repeat="item in cart | orderBy:'name'">
+                    <div><strong>{{ item.qty + ' x ' + item.name}}</strong></div>
+                    <span>{{ getCost(item) | currency }}</span>
+                    <span class="btn btn-dark btn-sm float-right" ng-click="removeItem(item);">X</span>
                 </li>
             </ul>
-            <h3>Total: {{ getTotal() | currency }}</h3>
-            <button class="btn-danger" ng-click="clearCart();">Clear Cart</button>
+            <ul class="list-group mb-3" ng-if="getTotal()==0">
+                <li class="list-group-item p-3">Your shopping cart is empty!</li>
+            </ul>
+            <ul class="list-group my-3" ng-if="getTotal()!=0">
+                <li class="list-group-item p-3">
+                    <h5 class="d-inline">Total: {{ getTotal() | currency }}</h5>
+                    <button class="btn btn-danger btn-sm float-right" ng-click="clearCart();">Clear Cart</button>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

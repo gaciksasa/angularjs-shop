@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "First slide label",
+    "name": "Mizuno Pantera",
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": true,
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "name": "Second slide label",
+    "name": "Garmin SX756",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": false,
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Third slide label",
+    "name": "Gym weight 5kg",
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": true,
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Fourth slide label",
+    "name": "Adidas 666 Devil",
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": false,
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "name": "Fifth slide label",
+    "name": "Apple Watch 7",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": true,
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "name": "Sixth slide label",
+    "name": "Gym weight 2.5kg",
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": false,
