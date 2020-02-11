@@ -1,0 +1,101 @@
+<div class="container" ng-controller="adminProducts">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="number" class="form-control" ng-model="item.id" /></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" class="form-control" ng-model="item.name" /></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>
+                <input type="text" class="form-control" ng-model="item.description" /></td>
+        </tr>
+        <tr>
+            <td>URL</td>
+            <td>
+                <input type="text" class="form-control" ng-model="item.url" /></td>
+        </tr>
+        <tr>
+            <td>Featured</td>
+            <td>
+                <input type="checkbox" width="auto" class="form-control" ng-model="item.featured" /></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>
+                <input type="text" class="form-control" ng-model="item.category" /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                <input type="number" class="form-control" ng-model="item.price" /></td>
+        </tr>
+        <tr>
+            <td class="text-right" colspan="2">
+                <button ng-click="addItem(item)" class="btn btn-primary">
+                    Add
+                </button>
+            </td>
+        </tr>
+    </table>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>URL</th>
+                <th>Featured</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td><span ng-hide="editMode">{{item.id}}</span>
+                    <input type="number" ng-show="editMode" ng-model="item.id" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.name}}</span>
+                    <input type="text" ng-show="editMode" ng-model="item.name" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.description}}</span>
+                    <input type="text" ng-show="editMode" ng-model="item.description" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.url}}</span>
+                    <input type="text" ng-show="editMode" ng-model="item.url" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.featured}}</span>
+                    <input type="checkbox" ng-show="editMode" ng-model="item.featured" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.category}}</span>
+                    <input type="text" ng-show="editMode" ng-model="item.category" />
+                </td>
+                <td>
+                    <span ng-hide="editMode">{{item.price}}</span>
+                    <input type="number" ng-show="editMode" ng-model="item.price" />
+                </td>
+                <td>
+                    <button type="button" class="btn btn-dark" ng-hide="editMode"
+                        ng-click="editMode = true; editItem(item)">Edit</button>
+                    <button type="button" class="btn btn-success" ng-show="editMode"
+                        ng-click="editMode = false">Save</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" ng-click="removeItem($index)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

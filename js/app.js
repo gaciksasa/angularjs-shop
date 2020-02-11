@@ -17,8 +17,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/contact", {
             templateUrl: "contact.html"
         })
-        .when("/cart", {
-            templateUrl: "cart.html"
+        .when("/admin", {
+            templateUrl: "admin.html"
         })
         .otherwise({
             redirectTo: '/'
@@ -93,3 +93,26 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
         };
     });
 }]);
+
+app.controller("adminProducts", function ($scope, $http) {
+
+    $http.get("js/products.json").then(function (response) {
+        $scope.items = response.data;
+    });
+
+    $scope.addItem = function (item) {
+        console.log(item);
+        $scope.items.push(item);
+        console.log($scope.items);
+        $scope.item = {};
+    },
+
+    $scope.removeItem = function (index) {
+        console.log(index);
+        $scope.items.splice(index, 1)
+    },
+    $scope.editItem = function (index) {
+        $scope.editing = $scope.items.indexOf(index);
+    }
+
+});
