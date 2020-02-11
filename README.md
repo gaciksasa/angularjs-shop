@@ -1,10 +1,10 @@
 <p>This is a small AngularJS/Bootstrap4 training project for fictional "Sport Shop" client's webshop.</p>
 
 <h3>VIEW DEMO</h3>
-<a href="http://gacikdesign.com/angularjs-shop">http://gacikdesign.com/angularjs-shop</a>
+<p><a href="http://gacikdesign.com/angularjs-shop">http://gacikdesign.com/angularjs-shop</a></p>
 
-
-<p>Website has following pages:</p>
+<h3>Introduction</h3>
+<p>Webshop consists of following pages:</p>
 <ul>
   <li>Homepage</li>
   <li>About us</li>
