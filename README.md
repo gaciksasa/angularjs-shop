@@ -1,4 +1,7 @@
-This is a small AngularJS/Bootstrap4 training project for fictional "Sport Shop" client's website.
+This is a small AngularJS/Bootstrap4 training project for fictional "Sport Shop" client's webshop.
+
+<h3>VIEW DEMO</h3>
+http://gacikdesign.com/angularjs-shop
 
 Website has following pages:
 <ul>
@@ -21,5 +24,3 @@ Name, description, price and product photo are displayed per every product, with
 Also, each product (single or multiple) can be added to Shopping cart or easy removed later.
 Shopping cart (in sidebar) display added product(s) and calculates single price for every product. Also total price for all products and quantities is calculated.
 
-<h3>VIEW DEMO</h3>
-http://gacikdesign.com/angularjs-shop
