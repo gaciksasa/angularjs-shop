@@ -1,25 +1,25 @@
-<div ng-controller="productsFeaturedCarousel" id="productsFeaturedCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#productsFeaturedCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#productsFeaturedCarousel" data-slide-to="1"></li>
-        <li data-target="#productsFeaturedCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item" ng-repeat="product in products | filter:isFeatured"
-            ng-class="{active: {{product.id == 1}}}">
-            <img ng-src="{{product.url}}" class="d-block w-100" alt="">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>{{product.name}}</h5>
-                <p>{{product.description}}</p>
+<div class="container">
+    <div ng-controller="productsFeaturedCarousel" id="productsFeaturedCarousel" class="carousel slide"
+        data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item" ng-repeat="product in products | filter:isFeatured"
+                ng-class="{active: {{product.id == 1}}}">
+                <img ng-src="{{product.url}}" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{product.name}}</h5>
+                    <p>{{product.description}}</p>
+                </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#productsFeaturedCarousel" role="button" data-slide="prev"
+            target="_self">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#productsFeaturedCarousel" role="button" data-slide="next"
+            target="_self">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="carousel-control-prev" href="#productsFeaturedCarousel" role="button" data-slide="prev" target="_self">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#productsFeaturedCarousel" role="button" data-slide="next" target="_self">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>

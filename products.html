@@ -25,7 +25,7 @@
                 <div class="col-xl-4 col-lg-6 col-sm-12"
                     ng-repeat="item in products | filter: searchProduct | orderBy: selectedSortOrder">
                     <div class="card mb-4">
-                        <img ng-src="{{item.url}}" class="card-img-top" alt="">
+                        <div class="card-img" style='background-image: url({{item.url}})'></div>
                         <div class="card-body">
                             <h5 class="card-title">{{item.name}}</h5>
                             <p class="text-info">{{item.category}}</p>

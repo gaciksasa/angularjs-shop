@@ -52,5 +52,32 @@
     "featured": false,
     "category": "Trainers",
     "price": 150
+  },
+  {
+    "id": 7,
+    "name": "Asics Kayano 26",
+    "description": "These Asics Kayano 26 Trainers are crafted with lace fastening and a padded ankle collar for a secure fit.",
+    "url": "img/asics-kayano-26-trainers.jpg",
+    "featured": false,
+    "category": "Footwear",
+    "price": 190
+  },
+  {
+    "id": 8,
+    "name": "Babolat Tennis Racket",
+    "description": "This is the newer version of the Babolat Pure Drive 26 Junior racket for 2018 Tennis Season",
+    "url": "img/puredrive-tennis-racket.jpg",
+    "featured": false,
+    "category": "Tennis",
+    "price": 80
+  },
+  {
+    "id": 9,
+    "name": "Asics Gel Flux 5",
+    "description": "These Asics Gel Flux 5 are crafted with lace fastening and a padded ankle collar for a secure fit. ",
+    "url": "img/asics-kayano-26-trainers.jpg",
+    "featured": false,
+    "category": "Footwear",
+    "price": 210
   }
 ]
