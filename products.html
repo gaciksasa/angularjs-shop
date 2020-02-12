@@ -1,9 +1,9 @@
 <div class="container" ng-controller="productsList">
     <div class="form-group row mt-4">
-        <div class="col-lg-6">
+        <div class="col-sm-6 col-md-8 col-lg-4">
             <h2>Products</h2>
         </div>
-        <div class="col-lg-3 col-offset-3">
+        <div class="col-sm-6 col-md-4 col-lg-offset-4">
             <select class="form-control" data-ng-model='selectedSortOrder'
                 data-ng-options="k as v for (k,v) in {'+name': 'Name: (A-Z)','-name': 'Name: (Z-A)', '+category': 'Category: (A-Z)', '-category': 'Category: (Z-A)', '+price': 'Price: (Low to High)', '-price': 'Price: (High to Low)' }"
                 data-ng-init="selectedSortOrder='+name'">
@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 col-lg-9">
+        <div class="col-sm-12 col-lg-8">
             <div class="form-group row bar bg-info">
                 <div class="col-6 col-md-4"><input type="text" class="form-control" ng-model="searchProduct"
                         placeholder="Search products"></div>
@@ -22,9 +22,9 @@
             </div>
 
             <div class="row grid" ng-show="layout == 'grid'">
-                <div class="col-xl-4 col-lg-6 col-sm-12"
+                <div class="col-md-6 col-sm-12"
                     ng-repeat="item in products | filter: searchProduct | orderBy: selectedSortOrder">
-                    <div class="card mb-4">
+                    <div class="card mb-3">
                         <div class="card-img" style='background-image: url({{item.url}})'></div>
                         <div class="card-body">
                             <h5 class="card-title">{{item.name}}</h5>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-lg-3">
+        <div class="col-sm-12 col-lg-4">
             <ul class="list-group">
                 <li class="list-group-item active bg-dark border-0 p-3">Your Cart</li>
                 <li class="list-group-item p-3" ng-repeat="item in cart | orderBy:'name'">

@@ -70,14 +70,5 @@
     "featured": false,
     "category": "Tennis",
     "price": 80
-  },
-  {
-    "id": 9,
-    "name": "Asics Gel Flux 5",
-    "description": "These Asics Gel Flux 5 are crafted with lace fastening and a padded ankle collar for a secure fit. ",
-    "url": "img/asics-kayano-26-trainers.jpg",
-    "featured": false,
-    "category": "Footwear",
-    "price": 210
   }
 ]
