@@ -5,7 +5,7 @@
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": true,
-    "category": "footwear",
+    "category": "Footwear",
     "price": 170
   },
   {
@@ -14,7 +14,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": false,
-    "category": "clothing",
+    "category": "Watches",
     "price": 100
   },
   {
@@ -23,7 +23,7 @@
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": true,
-    "category": "trainers",
+    "category": "Fitness equipment",
     "price": 120
   },
   {
@@ -32,7 +32,7 @@
     "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "img/slider1.jpg",
     "featured": false,
-    "category": "footwear",
+    "category": "Footwear",
     "price": 180
   },
   {
@@ -41,7 +41,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "img/slider2.jpg",
     "featured": true,
-    "category": "clothing",
+    "category": "Watches",
     "price": 200
   },
   {
@@ -50,7 +50,7 @@
     "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "img/slider3.jpg",
     "featured": false,
-    "category": "trainers",
+    "category": "Trainers",
     "price": 150
   }
 ]

@@ -1,5 +1,15 @@
 <div class="container" ng-controller="productsList">
-    <h2 class="my-4">Products</h2>
+    <div class="form-group row mt-4">
+        <div class="col-lg-6">
+            <h2>Products</h2>
+        </div>
+        <div class="col-lg-3 col-offset-3">
+            <select class="form-control" data-ng-model='selectedSortOrder'
+                data-ng-options="k as v for (k,v) in {'+name': 'Name: (A-Z)','-name': 'Name: (Z-A)', '+category': 'Category: (A-Z)', '-category': 'Category: (Z-A)', '+price': 'Price: (Low to High)', '-price': 'Price: (High to Low)' }"
+                data-ng-init="selectedSortOrder='+name'">
+            </select>
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-12 col-lg-9">
             <div class="form-group row bar bg-info">
@@ -12,11 +22,13 @@
             </div>
 
             <div class="row grid" ng-show="layout == 'grid'">
-                <div class="col-xl-4 col-lg-6 col-sm-12" ng-repeat="item in products | filter: searchProduct">
+                <div class="col-xl-4 col-lg-6 col-sm-12"
+                    ng-repeat="item in products | filter: searchProduct | orderBy: selectedSortOrder">
                     <div class="card mb-4">
                         <img ng-src="{{item.url}}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">{{item.name}}</h5>
+                            <p class="text-info">{{item.category}}</p>
                             <p class="card-text">{{item.description}}</p>
                             <h5 class="card-title">{{item.price | currency}}</h5>
                             <div class="form-inline">
@@ -31,13 +43,15 @@
             </div>
 
             <div class="list" ng-show="layout == 'list'">
-                <div class="card mb-4" ng-repeat="item in products | filter: searchProduct">
+                <div class="card mb-4"
+                    ng-repeat="item in products | filter: searchProduct | orderBy: selectedSortOrder">
                     <div class="row no-gutters">
                         <div class="col-lg-5 col-md-12 card-img" style='background-image: url({{item.url}})'>
                         </div>
                         <div class="col-lg-7 col-md-12">
                             <div class="card-body">
                                 <h5 class="card-title">{{item.name}}</h5>
+                                <p class="text-info">{{item.category}}</p>
                                 <p class="card-text">{{item.description}}</p>
                                 <h5 class="card-title">{{item.price | currency}}</h5>
                                 <div class="form-inline">
@@ -67,7 +81,8 @@
             <ul class="list-group my-3" ng-if="getTotal()!=0">
                 <li class="list-group-item p-3">
                     <h5 class="d-inline">Total: {{ getTotal() | currency }}</h5>
-                    <button type="button" class="btn btn-danger btn-block my-3" ng-click="clearCart();">Clear Cart</button>
+                    <button type="button" class="btn btn-danger btn-block my-3" ng-click="clearCart();">Clear
+                        Cart</button>
                     <button type="button" class="btn btn-secondary btn-block" disabled>Proceed to checkout</button>
                 </li>
             </ul>
