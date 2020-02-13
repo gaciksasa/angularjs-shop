@@ -46,6 +46,8 @@ app.controller("productsList", function ($scope, $http) {
         $scope.layout = 'grid';
     });
 
+
+    // Shopping Cart
     $scope.cart = [];
 
     var findItemById = function (items, id) {
@@ -95,20 +97,16 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
 }]);
 
 app.controller("adminProducts", function ($scope, $http) {
-
     $http.get("js/products.json").then(function (response) {
         $scope.items = response.data;
     });
 
     $scope.addItem = function (item) {
-        console.log(item);
         $scope.items.push(item);
-        console.log($scope.items);
         $scope.item = {};
     },
 
     $scope.removeItem = function (index) {
-        console.log(index);
         $scope.items.splice(index, 1)
     },
     $scope.editItem = function (index) {
