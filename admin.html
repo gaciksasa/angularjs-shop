@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <form method="post" action="append_json.php">
+            <form method="post" action="append_json.php" enctype="multipart/form-data">
                 <table class="table table-bordered bg-white">
                     <tr>
                         <td>ID</td>
@@ -24,14 +24,9 @@
                             <input type="text" class="form-control" name="description" ng-model="item.description" /></td>
                     </tr>
                     <tr>
-                        <td>URL</td>
+                        <td>Photo</td>
                         <td>
-                            <input type="text" class="form-control" name="url" ng-model="item.url" /></td>
-                    </tr>
-                    <tr>
-                        <td>Featured</td>
-                        <td>
-                            <input type="checkbox" name="featured" class="form-control" ng-model="item.featured" /></td>
+                            <input type="file" class="form-control" name="url" ng-model="item.url" /></td>
                     </tr>
                     <tr>
                         <td>Category</td>
@@ -58,8 +53,7 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>URL</th>
-                        <th>Featured</th>
+                        <th>Photo</th>
                         <th>Category</th>
                         <th>Price</th>
                         <th></th>
@@ -81,11 +75,7 @@
                         </td>
                         <td>
                             <span ng-hide="editMode">{{item.url}}</span>
-                            <input type="text" ng-show="editMode" ng-model="item.url" />
-                        </td>
-                        <td>
-                            <span ng-hide="editMode">{{item.featured}}</span>
-                            <input type="checkbox" ng-show="editMode" ng-model="item.featured" />
+                            <input type="file" ng-show="editMode" ng-model="item.url" />
                         </td>
                         <td>
                             <span ng-hide="editMode">{{item.category}}</span>
