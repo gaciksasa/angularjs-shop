@@ -27,10 +27,16 @@ if (isset($_POST["submit"])) {
     }
 
     $current_data = file_get_contents('js/products.json');
-    $array_data = json_decode($current_data);
-
+    $array_data = json_decode($current_data); /* convert JSON string to PHP variable */
+    echo '<br>';
+    $count = count($array_data);
+    echo 'Broj elemenata:' . $count;
+    echo '<br>';
+    $lastId = $array_data[$count-1]->id;
+    echo 'ID poslednjeg elementa: ' . $lastId;
+    
     $extra = array(
-        'id' => $_POST['id'],
+        'id' => $lastId + 1,
         'name' => $_POST['name'],
         'description' => $_POST["description"],
         'url' => 'img/' . basename($_FILES["url"]["name"]),
@@ -38,7 +44,13 @@ if (isset($_POST["submit"])) {
         'price' => $_POST["price"]
     );
     $array_data[] = $extra;
+
+    /* usort($array_data, function ($a, $b) {
+        return $a['id'] <=> $b['id'];
+    }); */
+
     $final_data = json_encode($array_data, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT);
+
     file_put_contents('js/products.json', $final_data);
 
     header("Location: /angularjs-shop/#!/admin");
