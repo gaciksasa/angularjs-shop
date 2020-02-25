@@ -2,7 +2,7 @@
 
 if (isset($_POST["submit"])) {
 
-    $target_dir = "img/";
+    $target_dir = "../img/";
     $target_file = $target_dir . basename($_FILES["url"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -26,14 +26,11 @@ if (isset($_POST["submit"])) {
         }
     }
 
-    $current_data = file_get_contents('js/products.json');
+    $current_data = file_get_contents('../js/products.json');
     $array_data = json_decode($current_data); /* convert JSON string to PHP variable */
-    echo '<br>';
+    
     $count = count($array_data);
-    echo 'Broj elemenata:' . $count;
-    echo '<br>';
     $lastId = $array_data[$count-1]->id;
-    echo 'ID poslednjeg elementa: ' . $lastId;
     
     $extra = array(
         'id' => $lastId + 1,
@@ -51,7 +48,7 @@ if (isset($_POST["submit"])) {
 
     $final_data = json_encode($array_data, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT);
 
-    file_put_contents('js/products.json', $final_data);
+    file_put_contents('../js/products.json', $final_data);
 
     header("Location: /angularjs-shop/#!/admin");
 }

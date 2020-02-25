@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <form method="post" action="append_json.php" enctype="multipart/form-data">
+            <form method="post" action="php/append_json.php" enctype="multipart/form-data">
                 <table class="table table-bordered bg-white">
                     <tr>
                         <td>Name</td>
@@ -57,8 +57,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in items">
-                        <td><span ng-hide="editMode">{{item.id}}</span>
-                            <input type="number" ng-show="editMode" ng-model="item.id" />
+                        <td><span>{{item.id}}</span>
                         </td>
                         <td>
                             <span ng-hide="editMode">{{item.name}}</span>
