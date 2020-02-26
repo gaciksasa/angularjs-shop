@@ -21,12 +21,17 @@
                     <tr>
                         <td>Photo</td>
                         <td>
-                            <input type="file" class="form-control" name="url" ng-model="item.url" /></td>
+                            <input type="file" name="url" ng-model="item.url" /></td>
                     </tr>
                     <tr>
                         <td>Category</td>
                         <td>
                             <input type="text" class="form-control" name="category" ng-model="item.category" /></td>
+                    </tr>
+                    <tr>
+                        <td>Featured</td>
+                        <td>
+                            <input type="checkbox" class="form-check-input ml-0" name="featured" ng-model="item.featured" /></td>
                     </tr>
                     <tr>
                         <td>Price</td>
@@ -45,9 +50,11 @@
             <table class="table table-bordered bg-white">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Photo</th>
+                        <th>Featured</th>
                         <th>Category</th>
                         <th>Price</th>
                         <th></th>
@@ -70,6 +77,10 @@
                         <td>
                             <span ng-hide="editMode">{{item.url}}</span>
                             <input type="file" ng-show="editMode" ng-model="item.url" />
+                        </td>
+                        <td>
+                            <span ng-hide="editMode">{{item.featured}}</span>
+                            <input type="checkbox" ng-show="editMode" ng-model="item.featured" />
                         </td>
                         <td>
                             <span ng-hide="editMode">{{item.category}}</span>

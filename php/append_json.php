@@ -29,14 +29,22 @@ if (isset($_POST["submit"])) {
     $current_data = file_get_contents('../js/products.json');
     $array_data = json_decode($current_data); /* convert JSON string to PHP variable */
     
-    /*$count = count($array_data);
-    $lastId = $array_data[$count-1]->id; */
+    $count = count($array_data);
+    $lastId = $array_data[$count-1]->id;
+
+    if($_POST["featured"] == 'on') {
+        $featured = true;
+    }
+    else {
+        $featured = false;
+    };
     
     $extra = array(
-        /* 'id' => $lastId + 1, */
+        'id' => $lastId + 1,
         'name' => $_POST['name'],
         'description' => $_POST["description"],
         'url' => 'img/' . basename($_FILES["url"]["name"]),
+        'featured' => $featured,
         'category' => $_POST["category"],
         'price' => $_POST["price"]
     );

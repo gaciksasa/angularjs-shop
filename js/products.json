@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Mizuno Pantera",
         "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         "url": "img\/slider1.jpg",
@@ -8,6 +9,7 @@
         "price": 170
     },
     {
+        "id": 2,
         "name": "Garmin SX756",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "url": "img\/slider2.jpg",
@@ -16,6 +18,7 @@
         "price": 100
     },
     {
+        "id": 3,
         "name": "Gym weight 5kg",
         "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
         "url": "img\/slider3.jpg",
@@ -24,6 +27,7 @@
         "price": 120
     },
     {
+        "id": 4,
         "name": "Adidas 666 Devil",
         "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         "url": "img\/slider1.jpg",
@@ -32,6 +36,7 @@
         "price": 180
     },
     {
+        "id": 5,
         "name": "Apple Watch 7",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "url": "img\/slider2.jpg",
@@ -40,6 +45,7 @@
         "price": 200
     },
     {
+        "id": 6,
         "name": "Gym weight 2.5kg",
         "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
         "url": "img\/slider3.jpg",
@@ -48,6 +54,7 @@
         "price": 150
     },
     {
+        "id": 7,
         "name": "Asics Kayano 26",
         "description": "These Asics Kayano 26 Trainers are crafted with lace fastening and a padded ankle collar for a secure fit.",
         "url": "img\/asics-kayano-26-trainers.jpg",
@@ -56,6 +63,7 @@
         "price": 190
     },
     {
+        "id": 8,
         "name": "Babolat Tennis Racket",
         "description": "This is the newer version of the Babolat Pure Drive 26 Junior racket for 2018 Tennis Season",
         "url": "img\/puredrive-tennis-racket.jpg",
@@ -64,6 +72,7 @@
         "price": 80
     },
     {
+        "id": 9,
         "name": "Hoka One One",
         "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
         "url": "img\/slider2.jpg",
@@ -72,19 +81,12 @@
         "price": 270
     },
     {
+        "id": 10,
         "name": "Nike Pink Blast",
         "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
         "url": "img\/slider2.jpg",
         "featured": false,
         "category": "Footwear",
         "price": 440
-    },
-    {
-        "id": 11,
-        "name": "Nike Method 3",
-        "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-        "url": "img\/Black_Pink_Blast.jpg",
-        "category": "Footwear",
-        "price": 160
     }
 ]
