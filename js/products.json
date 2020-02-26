@@ -88,5 +88,13 @@
         "featured": false,
         "category": "Footwear",
         "price": 440
+    },
+    {
+        "id": 11,
+        "name": "Nike Method 3",
+        "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        "url": "img\/Black_Pink_Blast.jpg",
+        "category": "Footwear",
+        "price": 160
     }
 ]

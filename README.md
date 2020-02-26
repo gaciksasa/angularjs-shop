@@ -10,6 +10,7 @@
   <li>About us</li>
   <li>Products -> Single product</li>
   <li>Contact</li>
+  <li>Admin</li>
 </ul>
 
 
@@ -24,4 +25,7 @@
 Name, description, price and product photo are displayed per every product, with option to view single product details on separate page.
 Also, each product (single or multiple) can be added to Shopping cart or easy removed later.
 Shopping cart (in sidebar) display added product(s) and calculates single price for every product. Also total price for all products and quantities is calculated.</p>
+
+<h3>Admin</h3>
+<p>On admin page, you can add new or edit/delete existing products.</p>
 
