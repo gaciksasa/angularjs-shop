@@ -3,7 +3,7 @@
         data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item" ng-repeat="product in products | filter:isFeatured"
-                ng-class="{active: {{product.id == 1}}}">
+                ng-class="{active: products.indexOf(product) === 0}">
                 <img ng-src="{{product.url}}" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{product.name}}</h5>

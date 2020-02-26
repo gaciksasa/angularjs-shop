@@ -45,7 +45,6 @@
             <table class="table table-bordered bg-white">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Photo</th>
@@ -57,8 +56,6 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in items">
-                        <td><span>{{item.id}}</span>
-                        </td>
                         <td>
                             <span ng-hide="editMode">{{item.name}}</span>
                             <input type="text" ng-show="editMode" ng-model="item.name" />

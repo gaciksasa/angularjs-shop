@@ -11,7 +11,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/products", {
             templateUrl: "partials/products.html"
         })
-        .when("/products/:productID", {
+        .when("/products/:productIndex", {
             templateUrl: "partials/product-single.html"
         })
         .when("/contact", {
@@ -86,25 +86,22 @@ app.controller("productsList", function ($scope, $http) {
     };
 });
 
-app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
-    $scope.id = $routeParams.productID;
+app.controller("productSingle", function ($scope, $http, $routeParams) {
+    $scope.index = $routeParams.productIndex;
     $http.get("js/products.json").then(function (response) {
         $scope.products = response.data;
-        $scope.selectedProduct = function (products) {
-            return products.id == $scope.id;
-        };
     });
-}]);
+});
 
 app.controller("adminProducts", function ($scope, $http) {
     $http.get("js/products.json").then(function (response) {
         $scope.items = response.data;
     });
 
-    $scope.addItem = function (item) {
+    /*$scope.addItem = function (item) {
         $scope.items.push(item);
         $scope.item = {};
-    },
+    },*/
 
     $scope.removeItem = function (index) {
         $scope.items.splice(index, 1)

@@ -1,17 +1,16 @@
-<div class="container" ng-controller="productSingle">
-    <h2 class="my-4">Product {{id}}</h2>
+<section class="container" ng-controller="productSingle">
+    <h2 class="my-4">Product details</h2>
     <div class="row">
-        <div class="col-lg-12" ng-repeat="product in products | filter:selectedProduct">
+        <div class="col-lg-12">
             <div class="card mb-4">
-                <img ng-src="{{product.url}}" class="card-img-top" alt="">
+                <img ng-src="{{products[index].url}}" class="card-img-top" alt="">
                 <div class="card-body">
-                    <h5 class="card-title">{{product.name}}</h5>
-                    <p class="card-text">{{product.description}}</p>
-                    <h5 class="card-title">{{product.price | currency}}</h5>
-                    <button class="btn btn-info">Buy <i class="fa fa-shopping-cart"
-                        aria-hidden="true" ng-click="addItem(item)"></i></button>
+                    <h5 class="card-title">{{products[index].name}}</h5>
+                    <p class="card-text">{{products[index].description}}</p>
+                    <h5 class="card-title">{{products[index].price | currency}}</h5>
+                    <a href="#!products" class="btn btn-info">&laquo; Back to products</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
