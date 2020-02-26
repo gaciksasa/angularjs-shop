@@ -31,7 +31,7 @@
                             <p class="card-text">{{item.description}}</p>
                             <h5 class="card-title">{{item.price | currency}}</h5>
                             <div class="form-inline">
-                                <a href ng-href="#!/products/{{item.id}}" class="btn btn-dark">View</a>
+                                <a href ng-href="#!/products/{{products.indexOf(item)}}" class="btn btn-dark">View</a>
                                 <input type="number" ng-init="item.qty=1" ng-model="item.qty"
                                     class="qty form-control ml-2">
                                 <button class="btn btn-info ml-2" ng-click="addItem(item)">Add</button>
@@ -54,7 +54,7 @@
                                 <p class="card-text">{{item.description}}</p>
                                 <h5 class="card-title">{{item.price | currency}}</h5>
                                 <div class="form-inline">
-                                    <a href ng-href="#!/products/{{item.id}}" class="btn btn-dark">View</a>
+                                    <a href ng-href="#!/products/{{products.indexOf(item)}}" class="btn btn-dark">View</a>
                                     <input type="number" ng-init="item.qty=1" ng-model="item.qty"
                                         class="qty form-control ml-2">
                                     <button class="btn btn-info ml-2" ng-click="addItem(item)">Add</button>
