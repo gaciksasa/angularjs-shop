@@ -11,7 +11,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when("/products", {
             templateUrl: "partials/products.html"
         })
-        .when("/products/:productIndex", {
+        .when("/products/:productID", {
             templateUrl: "partials/product-single.html"
         })
         .when("/contact", {
@@ -87,12 +87,16 @@ app.controller("productsList", function ($scope, $http) {
     };
 });
 
-app.controller("productSingle", function ($scope, $http, $routeParams) {
-    $scope.index = $routeParams.productIndex;
+app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+    $scope.id = $routeParams.productID;
     $http.get("js/products.json").then(function (response) {
         $scope.products = response.data;
+        console.log($scope.products);
+        $scope.selectedProduct = function (products) {
+            return products.id == $scope.id;
+        };
     });
-});
+}]); 
 
 app.controller("adminProducts", function ($scope, $http) {
     $http.get("js/products.json").then(function (response) {
