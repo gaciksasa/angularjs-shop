@@ -6,7 +6,8 @@
         "url": "img\/slider1.jpg",
         "featured": true,
         "category": "Footwear",
-        "price": 170
+        "price": 170,
+        "disabled": false
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "url": "img\/slider2.jpg",
         "featured": false,
         "category": "Watches",
-        "price": 100
+        "price": 120,
+        "disabled": true
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "url": "img\/slider3.jpg",
         "featured": true,
         "category": "Fitness equipment",
-        "price": 120
+        "price": 120,
+        "disabled": false
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "url": "img\/slider1.jpg",
         "featured": false,
         "category": "Footwear",
-        "price": 180
+        "price": 180,
+        "disabled": false
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "url": "img\/slider2.jpg",
         "featured": true,
         "category": "Watches",
-        "price": 200
+        "price": 200,
+        "disabled": false
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "url": "img\/slider3.jpg",
         "featured": false,
         "category": "Trainers",
-        "price": 150
+        "price": 150,
+        "disabled": false
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "url": "img\/asics-kayano-26-trainers.jpg",
         "featured": false,
         "category": "Footwear",
-        "price": 190
+        "price": 190,
+        "disabled": false
     },
     {
         "id": 8,
@@ -69,24 +76,27 @@
         "url": "img\/puredrive-tennis-racket.jpg",
         "featured": false,
         "category": "Tennis",
-        "price": 80
+        "price": 80,
+        "disabled": false
     },
     {
         "id": 9,
         "name": "Hoka One One",
         "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-        "url": "img\/slider2.jpg",
+        "url": "img\/asics-kayano-26-trainers.jpg",
         "featured": false,
         "category": "Footwear",
-        "price": 270
+        "price": 280,
+        "disabled": false
     },
     {
         "id": 10,
         "name": "Nike Pink Blast",
         "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-        "url": "img\/slider2.jpg",
+        "url": "img\/Black_Pink_Blast.jpg",
         "featured": false,
         "category": "Footwear",
-        "price": 440
+        "price": 340,
+        "disabled": false
     }
 ]

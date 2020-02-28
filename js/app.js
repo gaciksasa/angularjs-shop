@@ -91,7 +91,6 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
     $scope.id = $routeParams.productID;
     $http.get("js/products.json").then(function (response) {
         $scope.products = response.data;
-        console.log($scope.products);
         $scope.selectedProduct = function (products) {
             return products.id == $scope.id;
         };
@@ -99,6 +98,8 @@ app.controller("productSingle", ['$scope', '$http', '$routeParams', function ($s
 }]); 
 
 app.controller("adminProducts", function ($scope, $http) {
+    $current_url = $scope.current_url;
+    console.log($current_url);
     $http.get("js/products.json").then(function (response) {
         $scope.items = response.data;
     });
@@ -106,13 +107,13 @@ app.controller("adminProducts", function ($scope, $http) {
     /*$scope.addItem = function (item) {
         $scope.items.push(item);
         $scope.item = {};
-    },*/
+    },
 
     $scope.removeItem = function (index) {
         $scope.items.splice(index, 1)
     },
     $scope.editItem = function (index) {
         $scope.editing = $scope.items.indexOf(index);
-    }
+    }*/
 
 });
