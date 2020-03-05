@@ -9,6 +9,7 @@ if (isset($_POST["submit"])) {
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         $check = getimagesize($_FILES["url"]["tmp_name"]);
+        print_r($check);
         if ($check !== false) {
             echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
@@ -46,7 +47,7 @@ if (isset($_POST["submit"])) {
         $featured = false;
     };
 
-    if ($_POST["disabled"] == 'true') {
+    if ($_POST["disabled"] == 'on') {
         $disabled = true;
     } else {
         $disabled = false;

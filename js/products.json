@@ -6,7 +6,7 @@
         "url": "img\/slider1.jpg",
         "featured": true,
         "category": "Footwear",
-        "price": 170,
+        "price": 171,
         "disabled": false
     },
     {
@@ -17,7 +17,7 @@
         "featured": false,
         "category": "Watches",
         "price": 120,
-        "disabled": true
+        "disabled": false
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "id": 4,
         "name": "Adidas 666 Devil",
         "description": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-        "url": "img\/slider1.jpg",
+        "url": "img\/sh501-magnolia.jpeg",
         "featured": false,
         "category": "Footwear",
         "price": 180,
@@ -53,7 +53,7 @@
         "id": 6,
         "name": "Gym weight 2.5kg",
         "description": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-        "url": "img\/slider3.jpg",
+        "url": "img\/Black_Pink_Blast.jpg",
         "featured": false,
         "category": "Trainers",
         "price": 150,

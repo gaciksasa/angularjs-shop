@@ -1,1 +1,0 @@
-[26-Feb-2020 12:19:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/gacikdes/public_html/angularjs-shop/php/append_json.php:12) in /home3/gacikdes/public_html/angularjs-shop/php/append_json.php on line 53
